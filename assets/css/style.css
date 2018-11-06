@@ -12,7 +12,7 @@ a {
   cursor: pointer; }
 
 .home_background {
-  background-image: url("http://127.0.0.1:5500/assets/images/home.jpg");
+  background-image: url("../images/home.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ a {
       margin-top: 0px;
       width: 516px; }
     .container_content__plus .bg {
-      background-image: url("http://127.0.0.1:5500/assets/images/aplus.jpg");
+      background-image: url("../images/aplus.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
