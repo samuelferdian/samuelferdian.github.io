@@ -21,11 +21,27 @@ a {
 
 .home_background { 
     background-image: url("../images/home.jpg");
-    height: 100%; 
+    height: 110%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 20px 300px -10px rgba(0,0,0,0.7);
+    .bottom_corner {
+        @include flex();
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        margin-top:20px;
+        span {
+            line-height: 18px;
+            width: 141px;
+            height: 40px;
+            padding-right: 20px;
+            color: $white;
+            font-weight: 500;
+            text-align: right;
+        }
+    }
 }
 
 .header {
@@ -145,6 +161,7 @@ a {
         flex-wrap: wrap;
         margin: 32px 0;
         div:first-child {
+            cursor: pointer;
             font-size: 24px;
             font-weight: 700;
             line-height: 30px;
@@ -153,6 +170,7 @@ a {
         }
         div:nth-child(n+2) {
             @include flex();
+            cursor: pointer;
             align-items: center;
             margin-right: 20px;
             width: 244px;
@@ -176,6 +194,7 @@ a {
         @include flex();
         flex-wrap: wrap;
         margin: 32px 0;
+        cursor: pointer;
         h3 {
             font-weight: 700;
             font-size: 24px;
@@ -326,10 +345,34 @@ a {
                 background-repeat: no-repeat;
                 margin: 8px;
                 &.family {
+                    cursor: pointer;
                     background-image: url("https://a0.muscache.com/pictures/d6bff1d0-c2d8-48cd-b1c1-8c4898efeba3.jpg");    
                 }
                 &.work {
+                    cursor: pointer;
                     background-image: url("https://a0.muscache.com/pictures/0304786f-1a82-4cf7-935f-6c9c2d455e33.jpg");
+                }
+                &.desc {
+                    height: auto;
+                    margin: 0 8px;
+                    @include flex();
+                    flex-wrap: wrap;
+                    small {
+                        width: 100%;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 16px;
+                        letter-spacing: normal;
+                        margin: 5px 0;
+                    }
+                    span {
+                        width: 85%;
+                        font-weight: normal;
+                        font-size: 17px;
+                        line-height: 18px;
+                        letter-spacing: 0.2px;
+                    }
                 }
             }
         }
@@ -350,7 +393,7 @@ a {
             font-size: 16px;
             line-height: 22px;
             font-weight: normal;
-            width: 45%;
+            width: 50%;
             margin-top: 0px;
         }
         .box {
@@ -358,10 +401,9 @@ a {
             width: 100%;
             padding-top: 0px;
             margin-top: 0px;
-            cursor: pointer;
             .box_1, .box_2, .box_3 {
-                @include flex();
-                margin: 20px 6px;
+                cursor: pointer;
+                margin: 5px 6px;
                 width: 334px;
                 height: 204px;
                 color: rgb(72, 72, 72);
@@ -370,12 +412,59 @@ a {
                 background-position: center center;
                 background-repeat: no-repeat;
                 border-radius: 3px;
+                .svg {
+                    @include flex();
+                    width: 100%;
+                    height: 50%;
+                    justify-content: center;
+                    align-items: flex-end;
+                    svg {
+                        height: 36px;
+                        width: 70.795px;
+                    }
+                }
+                span {
+                    @include flex();
+                    width: 100%;
+                    height: 20%;
+                    justify-content: center;
+                    color: rgb(60, 60, 65);
+                    font-size: 32px !important;
+                    line-height: 36px !important;
+                    letter-spacing: normal !important;
+                    font-weight: 700;
+                }
             }
             .box_2 {
                 background-image: url("https://a0.muscache.com/4ea/air/v2/pictures/d82b445b-b7ce-4277-9131-3aab48633e9d.jpg?t=r:w654-h400-sfit,e:fjpg-c90");
             }
             .box_3 {
                 background-image: url("https://a0.muscache.com/4ea/air/v2/pictures/7a766443-e3d8-486d-b838-f9e4bc2ee863.jpg?t=r:w654-h400-sfit,e:fjpg-c90");
+            }
+            .box_1_desc, .box_2_desc, .box_3_desc {
+                margin: 0 6px;
+                width: 334px;
+                color: rgb(72, 72, 72);
+                small {
+                    @include flex();
+                    flex-wrap: wrap;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: normal;
+                    margin: 5px 0;
+                }
+                span {
+                    @include flex();
+                    flex-wrap: wrap;
+                    width: 85%;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                }
             }
         }
     }
